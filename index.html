@@ -97,27 +97,30 @@
 								<header>
 									<h2>Contact Me</h2>
 								</header>
-								<form action="#" method="post">
+								<form action="https://api.web3forms.com/submit" method="post">
+									 <input type="hidden" name="access_key" value="36da0380-7611-4c9a-b05a-7105340edde2">
 									<div>
 										<div class="row">
 											<div class="col-6 col-12-medium">
-												<input type="text" name="name" placeholder="Name" />
+												<input type="text" name="name" placeholder="Name"   required/>
 											</div>
 											<div class="col-6 col-12-medium">
-												<input type="text" name="email" placeholder="Email" />
+												<input type="text" name="email" placeholder="Email"   required/>
 											</div>
 											<div class="col-12">
-												<input type="text" name="subject" placeholder="Subject" />
+												<input type="text" name="subject" placeholder="Subject"   required/>
 											</div>
 											<div class="col-12">
 												<textarea name="message" placeholder="Message" rows="6"></textarea>
 											</div>
+											<div class="h-captcha" data-captcha="true"></div>
 											<div class="col-12">
 												<input type="submit" value="Send Message" />
 											</div>
 										</div>
 									</div>
 								</form>
+								<script src="https://web3forms.com/client/script.js" async defer></script>
 							</article>
 
 					</div>
