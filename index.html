@@ -68,7 +68,7 @@
 								<header>
 									<h2>Contact Me</h2>
 								</header>
-								<form action="https://api.web3forms.com/submit" method="post">
+								<form id="form" action="https://api.web3forms.com/submit" method="post">
 									 <input type="hidden" name="access_key" value="36da0380-7611-4c9a-b05a-7105340edde2">
 									<div>
 										<div class="row">
@@ -111,6 +111,20 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script src="https://web3forms.com/client/script.js" async defer></script>
+			<script>
+const form = document.getElementById('form');
+
+form.addEventListener('submit', function(e) {
+
+    const hCaptcha = form.querySelector('textarea[name=h-captcha-response]').value;
+
+    if (!hCaptcha) {
+        e.preventDefault();
+        alert("Please fill out captcha field")
+        return
+    }
+});
+</script>
 
 	</body>
 </html>
